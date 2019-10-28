@@ -1,0 +1,16 @@
+<h1>{{title}}</h1>
+
+{{#if buttonType.admin}}
+  <button class="launch">Add New User</button>
+{{else}}
+   <button class="login">Log in</button>
+{{/if}}
+
+<ul>
+{{#each data.user}}
+<li>
+    {{@index}} -- {{this.name}} PH: {{this.phone}}, email: {{this.email}}
+</li>
+{{/each}}
+</ul>
+

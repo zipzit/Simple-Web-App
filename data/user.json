@@ -1,0 +1,29 @@
+{
+    "user": [
+        {
+            "name": "Adam",
+            "phone": "123-555-1234",
+            "email": "adam@yahoo.com"
+        },
+        {
+            "name": "Beth",
+            "phone": "321-555-1111",
+            "email": "beth@gmail.com"
+        },
+        {
+            "name": "Charize",
+            "phone": "434-555-2323",
+            "email": "charize@email.com"
+        },
+        {
+            "name": "Dune",
+            "phone": "543-555-3212",
+            "email": "dune@hotmail.com"
+        },
+        {
+            "name": "Elizabeth",
+            "phone": "787-555-3295",
+            "email": "liz@myemail.com"
+        }
+    ]
+}
