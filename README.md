@@ -27,6 +27,7 @@ Things I'd like to see:
 Reference:
  - Sidebar Menu in Bootstrap: https://bootstrapious.com/p/bootstrap-sidebar
  - Echarts:  https://echarts.apache.org/examples/en/index.html
+ - Charts.js:  https://www.chartjs.org/samples/latest/charts/combo-bar-line.html
  - LowDB: https://github.com/typicode/lowdb
  - LokiJS: https://github.com/techfort/LokiJS
  
