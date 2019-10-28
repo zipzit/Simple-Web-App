@@ -22,14 +22,12 @@ $(document).ready(function () {
 
 
     $('#addNewMemberBtn').on('click', function(){
-        formPostRequest('addNewMemberFormId', '/users/add/')
-        // formPostRequest('formElem', '/users/add/')
+        formPostRequest('addNewMemberFormId', '/users/addUserPost/')
     })
 
     async function formPostRequest(formIdString, apiAddressString) {
-        console.log(document.getElementById(formIdString))
         const formData = await new FormData(document.getElementById(formIdString));
-        console.log("simple formData: ",formData)
+        // console.log("simple formData: ",formData)
         console.log("...formData: ", ...formData)
         await fetch(apiAddressString, {
                 method: 'POST',
