@@ -2,13 +2,12 @@ var express = require('express');
 var router = express.Router();
 const fs = require('fs');
 
-/* GET users listing. */
+/* GET xxx page. */
 router.get('/', function (req, res, next) {
     res.send('respond with a resource');
 });
 
-
-/* GET home page. */
+/* GET users listing. */
 router.get('/getall', function (req, res, next) {
     getUserData()
         .then(data => (
@@ -19,6 +18,17 @@ router.get('/getall', function (req, res, next) {
                 }, data
             })
         ))
+});
+
+/* GET home page. */
+router.get('/add', function (req, res, next) {
+    res.render('adduser', { title: 'Add New Team Member' });
+});
+
+router.post('/add', function (req, res, next) {
+    // console.log(req)
+    console.log("post submission: ", req)
+    res.send({text:"got the post request"})
 });
 
 var getUserData = function () {

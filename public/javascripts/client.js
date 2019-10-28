@@ -19,4 +19,40 @@ $(document).ready(function () {
         $('.collapse.in').toggleClass('in');
         $('a[aria-expanded=true]').attr('aria-expanded', 'false');
     });
+
+
+    $('#addNewMemberBtn').on('click', function(){
+        formPostRequest('addNewMemberFormId', '/users/add/')
+        // formPostRequest('formElem', '/users/add/')
+    })
+
+    async function formPostRequest(formIdString, apiAddressString) {
+        console.log(document.getElementById(formIdString))
+        const formData = await new FormData(document.getElementById(formIdString));
+        console.log("simple formData: ",formData)
+        console.log("...formData: ", ...formData)
+        await fetch(apiAddressString, {
+                method: 'POST',
+                body: formData
+            })
+            .then(validateResponse)
+            // .then(readResponseAsText)
+            .catch(logError);
+    }
+
+    function validateResponse(response) {
+        if (!response.ok) {
+            throw Error(response.statusText);
+        }
+        return response;
+    }
+
+    function readResponseAsText(response) {
+        return response.text();
+    }
+
+    function logError(error) {
+        console.log('Looks like there was a problem:', error);
+    }    
+    
 });
