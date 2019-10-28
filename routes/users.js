@@ -15,7 +15,7 @@ router.get('/getall', function (req, res, next) {
         .then(data => (
             res.render('users', {
                 title: 'Our Team',
-                buttonType: {
+                buttonType: {    // sample technique only
                     admin: true
                 }, data
             })
@@ -27,19 +27,26 @@ router.get('/add', function (req, res, next) {
     res.render('adduser', { title: 'Add New Team Member' });
 });
 
-router.post('/addUserPostxx', function (req, res, next) {
-    // console.log(req)
-    // Total fail here. Can't see inside req. 
-    console.log("post submission: ", req.body)
-    res.send({text:"got the post request"})
-});
-
 router.post('/addUserPost', upload.none(), (req, res) => {
     // ref S.O.37630419
     const formData = req.body;
-    console.log('form data', formData);
+    console.log(formData);
+    storeNewUserData(formData);
     res.sendStatus(200);
-  });
+});
+
+var storeNewUserData = async function (newUserObject) {
+    const UserDataStore = await getUserData();
+    UserDataStore.user.push(newUserObject)
+    fs.writeFile('./data/user.json', JSON.stringify(UserDataStore), (err) => {
+        if (err) { console.log('Error writing file:', err) }
+        try {
+            console.log("Db updated...")
+        } catch (err) {
+            console.log('Error writing file:', err)
+        }
+    })
+}
 
 var getUserData = function () {
     //readFile is an asynchroneous process

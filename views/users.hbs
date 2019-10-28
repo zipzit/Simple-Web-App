@@ -1,10 +1,5 @@
 <h1>{{title}}</h1>
 
-{{#if buttonType.admin}}
-<button class="launch">Add New User</button>
-{{else}}
-<button class="login">Log in</button>
-{{/if}}
 
 
 <div class="row">
@@ -30,4 +25,11 @@
             </tbody>
         </table>
     </div>
+</div>
+<div>
+{{#if buttonType.admin}}
+<a href="/users/add" ><button type="button" class="btn btn-primary">Add New User</button></a>  
+{{else}}
+
+{{/if}}
 </div>

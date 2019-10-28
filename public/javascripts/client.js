@@ -34,7 +34,6 @@ $(document).ready(function () {
                 body: formData
             })
             .then(validateResponse)
-            // .then(readResponseAsText)
             .catch(logError);
     }
 
