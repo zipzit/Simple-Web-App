@@ -19,8 +19,6 @@ router.get('/getall', function (req, res, next) {
                 }, data
             })
         ))
-    // .catch(console.log("hello"))   // fail.. the function above is NOT a promise, therefore this occurs first in chain
-    //                                // if logging err, there would be none.. 
 });
 
 var getUserData = function () {
@@ -32,11 +30,11 @@ var getUserData = function () {
                 reject("Read file error: ", err)
             }
             try {
-                console.log('File data:', jsonString)
+                // console.log('File data:', jsonString)
                 const usersObj = JSON.parse(jsonString)
                 resolve(usersObj)  // what if .parse fails?
-            } 
-            catch(err) {
+            }
+            catch (err) {
                 reject("Parse JSON error: ", err)
             }
         })
