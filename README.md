@@ -30,4 +30,5 @@ Reference:
  - Charts.js:  https://www.chartjs.org/samples/latest/charts/combo-bar-line.html
  - LowDB: https://github.com/typicode/lowdb
  - LokiJS: https://github.com/techfort/LokiJS
+ - Top Ranked Hackathon Boilerplate Site: https://github.com/sahat/hackathon-starter
  
