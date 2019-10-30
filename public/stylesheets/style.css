@@ -211,3 +211,14 @@ a.article:hover {
 #sidebarCollapse {
     background: #6191c5;
 }
+
+.sms, .email {
+    width: 8px;
+    float: left;
+    margin: 0;
+    padding: 0;
+}
+
+.sms img, .email img {
+    width: 7vw;
+}

@@ -51,5 +51,21 @@ $(document).ready(function () {
     function logError(error) {
         console.log('Looks like there was a problem:', error);
     }    
+
+    jQuery.event.special.touchstart = 
+    //S.O.39152877
+    {
+      setup: function( _, ns, handle )
+      {
+        if ( ns.includes("noPreventDefault") ) 
+        {
+          this.addEventListener("touchstart", handle, { passive: false });
+        } 
+        else 
+        {
+          this.addEventListener("touchstart", handle, { passive: true });
+        }
+      }
+    };
     
 });

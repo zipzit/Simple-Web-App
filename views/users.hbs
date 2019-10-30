@@ -10,6 +10,7 @@
                     <th>#</th>
                     <th>Name</th>
                     <th>Phone</th>
+                    <th>Text Page</th>
                     <th>Email</th>
                 </tr>
             </thead>
@@ -18,8 +19,9 @@
                 <tr>
                 <td>{{@index}}</td>
                 <td>{{this.name}}</td>
-                <td>{{this.phone}}</td>
-                <td>{{this.email}}</td>
+                <td><a href="tel:+1{{this.phone}}">{{this.phone}}</a></td>
+                <td><div class="sms"><a href="sms:+1{{this.phone}}"><img src="/images/crosstxt-icon.jpg"></a></div></td>
+                <td><div class="email"><a href="mailto:{{this.email}}"><img src="/images/email-icon.png">{{this.email}}</a></div></td>
                 </tr>
                 {{/each}}
             </tbody>

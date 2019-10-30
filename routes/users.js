@@ -22,6 +22,13 @@ router.get('/getall', function (req, res, next) {
         ))
 });
 
+var processUserData = function(data) {
+    return new Promise(function (resolve, reject) {
+        //note to self. I was going to process tel, sms, email links here...
+        //but instead decided to process them in the handlebars template.
+    })
+}
+
 /* GET home page. */
 router.get('/add', function (req, res, next) {
     res.render('adduser', { title: 'Add New Team Member' });
