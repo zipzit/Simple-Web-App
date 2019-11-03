@@ -2,7 +2,7 @@
     "user": [
         {
             "name": "Adam",
-            "phone": "123-555-1234",
+            "phone": "323-555-1234",
             "email": "adam@yahoo.com"
         },
         {
@@ -39,6 +39,11 @@
             "name": "Erin",
             "phone": "786-555-9982",
             "email": "erin@yahoo.com"
+        },
+        {
+            "name": "Hilda",
+            "phone": "673-555-8734",
+            "email": "hilda@gmail.com"
         }
     ]
 }

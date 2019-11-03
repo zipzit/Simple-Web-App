@@ -23,6 +23,7 @@ Things I'd like to see:
  - REST API calls, with CRUD (Create , Read , Update , Delete) functions
  - Ajax call
  - Form Submit with Fetch and FormData 
+ - DB interface in a simple swap in / swap out module (simple .json file?  Mongo? mysql?)
 
 Reference:
  - Sidebar Menu in Bootstrap: https://bootstrapious.com/p/bootstrap-sidebar
