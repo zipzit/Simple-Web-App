@@ -39,6 +39,7 @@ router.post('/addUserPost', upload.none(), (req, res) => {
     const formData = req.body;
     console.log(formData);
     storeNewUserData(formData);
+    // oops.  need to test for success, before submitting a res 200...
     res.sendStatus(200);
 });
 
